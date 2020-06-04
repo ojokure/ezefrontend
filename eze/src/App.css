@@ -4,11 +4,16 @@
 
 .App-header {
   background-color: #14161c;
-  min-height: 100vh;
   display: flex;
-  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
-  justify-content: space-between;
   color: white;
-  margin-top: 0px;
+  margin: 0px 5px;
+  /* margin: 40px; */
+}
+
+.header-img {
+  margin-top: 15px;
+  margin-left: 30em;
+  width: 30%;
 }

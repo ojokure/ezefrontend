@@ -1,5 +1,5 @@
 import React from "react";
-import prdcts from "./img/appleprdcts.PNG";
+import prdctsimg from "./img/appleprdcts.PNG";
 
 function Header() {
   return (
@@ -8,7 +8,8 @@ function Header() {
         SHOP OUR LATEST <br />
         AVAILABLE STOCK HERE
       </h1>
-      <img src={prdcts} alt="products image" />
+
+      <img src={prdctsimg} alt="products" className="header-img" />
     </div>
   );
 }
