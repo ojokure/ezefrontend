@@ -1,8 +1,10 @@
 import React from "react";
 import "./App.css";
-import Header from "./Header";
-import Devices from "./Devices";
-import Footer from "./Footer";
+import Header from "./Components/Header";
+import Devices from "./Components/Devices";
+import Footer from "./Components/Footer";
+import LoadMore from "./Components/LoadMore";
+// import Mainlayout from "./Mainlayout";
 
 const phones = [
   { name: "one", condition: "A1" },
@@ -31,6 +33,8 @@ function App() {
     <div className="App">
       <Header />
       <Devices devices={phones} />
+      {/* <Mainlayout devices={phones} /> */}
+      <LoadMore />
       <Footer />
     </div>
   );
