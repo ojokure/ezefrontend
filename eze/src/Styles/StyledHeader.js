@@ -7,7 +7,8 @@ export const StyledHeader = styled.div`
   justify-content: space-around;
   /* align-items: center; */
   color: white;
-  margin: 0px 5px;
+  padding-bottom: 100px;
+  margin: 0px 16px;
   /* margin: 40px; */
 
   .header-text {

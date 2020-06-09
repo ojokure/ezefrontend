@@ -5,9 +5,10 @@ export const StyledMarketplace = styled.div`
 display: flex;
 flex-direction: row;
 justify-content: space-between;
-align-content:center;
+align-items:flex-start;
 width: 100%;
 margin-top: 5rem;
+
 
 .categories {
   display: flex;

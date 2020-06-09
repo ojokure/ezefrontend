@@ -1,30 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import prdctsimg from "../Img/appleprdcts.PNG";
 import { Input } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 import { StyledHeader, StyledHeaderButton } from "../Styles/StyledHeader";
 
-function Header() {
-  // const [ state, setState ] = useState()
+function Header({ searchDevicesCallback }) {
+  const [searchValue, setSearchValue] = useState("");
 
-  // const search_keyword = (searchterm) => {
-  //   ...state,
-  //   devices: state.filter(
-  //    device =>
-  //      device.name
-  //         .toLowerCase()
-  //         .includes(searchterm.toLowerCase()) ||
-  //      device.storage_size
-  //         .toLowerCase()
-  //         .includes(searchterm.toLowerCase()) ||
-  //       (device.condition &&
-  //        device.condition
-  //           .toLowerCase()
-  //           .includes(searchterm.toLowerCase())),
-  //   ),
-  // };
+  const timeOut = useRef(null);
 
-  // const search
+  const handleSearch = (event) => {
+    const { value } = event.target;
+
+    clearTimeout(timeOut.current);
+    // console.log(value);
+    setSearchValue(value);
+    console.log(event.target.value);
+
+    timeOut.current = setTimeout(() => {
+      searchDevicesCallback(searchValue);
+      console.log(searchValue);
+    }, 500);
+  };
 
   return (
     <StyledHeader>
@@ -36,7 +33,9 @@ function Header() {
         <Input
           id="search"
           placeholder="Search by name, condition, storage size"
-          prefix={<SearchOutlined />}
+          // prefix={<SearchOutlined />}
+          onChange={handleSearch}
+          value={searchValue}
         />
         <StyledHeaderButton> Search </StyledHeaderButton>
       </div>

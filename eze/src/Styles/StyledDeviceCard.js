@@ -16,6 +16,8 @@ export const StyledDeviceCard = styled.div`
   color: white;
   text-align: center;
   background: #1e242f;
+  font-family: "Crimson Text", serif;
+
   :hover {
     /* opacity: 0.8; */
     transform: scale(1);
@@ -30,8 +32,12 @@ export const StyledDeviceCard = styled.div`
     align-items: center;
     width: 100%;
     max-height: 5.5rem;
+    font-family: "Crimson Text", serif;
+
     .header-text {
       margin-left: 1rem;
+      font-family: "Crimson Text", serif;
+
       h3 {
         font-weight: bold;
         font-size: 1rem;
@@ -54,27 +60,23 @@ export const StyledDeviceCard = styled.div`
       display: flex;
       justify-content: flex-start;
       /* align-items: center; */
-      .picture {
-        width: 5rem;
-        height: 5rem;
-      }
     }
   }
 
   .bullet-points p {
     margin: 0;
-    .location-bullet .location-icon {
-      margin-left: 0.1em;
-      padding-right: 0.1em;
-    }
+    font-family: "Crimson Text", serif;
   }
 
   .description p {
     margin: 0;
+    font-family: "Crimson Text", serif;
   }
 `;
 
 export const StyledButton = styled(StyledHeaderButton)`
   padding: 0.6em;
   width: 90px;
+  font-family: "Crimson Text", serif;
+  font-size: 0.85rem;
 `;
