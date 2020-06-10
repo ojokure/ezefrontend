@@ -3,21 +3,28 @@ import devices from "../Utils/devices";
 
 export const StyledHeader = styled.div`
   background-color: #14161c;
+
   display: flex;
-  justify-content: space-around;
-  /* align-items: center; */
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
   color: white;
   padding-bottom: 100px;
   margin: 0px 16px;
-  /* margin: 40px; */
+
+  @media ${devices.tablet} {
+    flex-direction: column;
+  }
 
   .header-text {
   }
 
   .header-img {
     margin-top: 15px;
-    margin-left: 30em;
     width: 30%;
+    @media ${devices.tablet} {
+      display: none;
+    }
   }
 
   #search {

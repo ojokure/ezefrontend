@@ -37,33 +37,37 @@ const phones = [
 function App() {
   const [state, setState] = useState(phones);
 
-  const searchByMinMaxPrice = (min = 0, max = 500000) => {
+  const searchByMinMaxPrice = (min, max = 500000) => {
     setState((prev) =>
       prev.filter(
         (devices) =>
           devices.price >= parseInt(min) && devices.price <= parseInt(max)
       )
     );
+    console.log(min, max);
   };
 
   const searchDevicesByKeyword = (search) => {
-    setState((prev) =>
-      prev.filter(
-        (devices) =>
-          (devices.name &&
-            devices.name
-              .toLowerCase()
-              .includes(search && search.toLowerCase())) ||
-          (devices.condition &&
-            devices.condition
-              .toLowerCase()
-              .includes(search && search.toLowerCase())) ||
-          (devices.storage &&
-            devices.storage
-              .toLowerCase()
-              .includes(search && search.toLowerCase()))
-      )
-    );
+    if (search) {
+      setState((prev) =>
+        prev.filter(
+          (devices) =>
+            (devices.name &&
+              devices.name
+                .toLowerCase()
+                .includes(search && search.toLowerCase())) ||
+            (devices.condition &&
+              devices.condition
+                .toLowerCase()
+                .includes(search && search.toLowerCase()))
+          //     ||
+          // (devices.storage &&
+          //   devices.storage
+          //     .toLowerCase()
+          //     .includes(search && search.toLowerCase()))
+        )
+      );
+    }
   };
 
   // if (error) return <div>Something went wrong ...</div>;
@@ -79,7 +83,7 @@ function App() {
   return (
     <div className="App">
       <Header searchDevicesCallback={searchDevicesByKeyword} />
-      <Devices devices={phones} searchPriceCallback={searchByMinMaxPrice} />
+      <Devices devices={state} searchPriceCallback={searchByMinMaxPrice} />
       <LoadMore />
       <Footer />
     </div>

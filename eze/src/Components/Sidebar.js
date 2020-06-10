@@ -13,10 +13,10 @@ export function SideBar({ searchPrice }) {
   const handleSearch = (event) => {
     const { value, name } = event.target;
 
-    setPrice({ ...price, [name]: value });
+    setPrice({ ...price, [name]: +parseInt(value) });
 
     searchPrice(price.min, price.max);
-    console.log(price);
+    // console.log(price);
   };
 
   return (
@@ -31,7 +31,7 @@ export function SideBar({ searchPrice }) {
           <div className="bar-menu"> MacBook </div>
           <div className="bar-menu"> Airpods </div>
           <div className="bar-menu"> Price Filter </div>
-          <div className="bar-menu">
+          <div>
             <Input
               name="min"
               id="search"

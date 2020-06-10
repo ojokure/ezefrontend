@@ -3,19 +3,16 @@ import DeviceCard from "./DeviceCard";
 import Sidebar from "./Sidebar";
 import device_images from "./imageArray";
 import { StyledMarketplace } from "../Styles/StyledMarketPlace";
-import Mainlayout from "./Mainlayout";
 
 console.log(device_images);
 
 function Devices(props) {
   const { devices, searchPriceCallback } = props;
+  console.log(devices);
 
   return (
     <StyledMarketplace>
-      {/* <div className="categories"> Categories </div> */}
       <Sidebar searchPrice={searchPriceCallback} />
-      {/* <Mainlayout /> */}
-
       <div className="devices">
         {devices?.map((device) => (
           <DeviceCard

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import prdctsimg from "../Img/appleprdcts.PNG";
 import { Input } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
@@ -23,6 +23,10 @@ function Header({ searchDevicesCallback }) {
     }, 500);
   };
 
+  useEffect(() => {
+    searchDevicesCallback(searchValue);
+  }, [searchValue]);
+
   return (
     <StyledHeader>
       <div>
@@ -31,6 +35,7 @@ function Header({ searchDevicesCallback }) {
           AVAILABLE STOCK HERE
         </h1>
         <Input
+          name="searchValue"
           id="search"
           placeholder="Search by name, condition, storage size"
           // prefix={<SearchOutlined />}

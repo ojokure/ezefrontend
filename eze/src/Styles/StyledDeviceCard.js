@@ -23,7 +23,7 @@ export const StyledDeviceCard = styled.div`
     transform: scale(1);
     transition: all 0.5s ease;
   }
-  /* box-shadow: 0 3px 3px #d3d3d3; */
+  box-shadow: 0px 1px 3px #d3d3d3;
 
   .header {
     display: flex;

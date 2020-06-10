@@ -2,12 +2,8 @@ import styled from "styled-components";
 import devices from "../Utils/devices";
 
 export const StyledSideBar = styled.div`
-  /* display: flex;
-  flex-direction: column; */
-  /* justify-content: center; */
-  /* align-items: center; */
   width: 16rem;
-  /* height: auto; */
+  height: auto;
   padding-right: 1.5rem;
   margin-left: 2rem;
   margin-right: 0.5rem;
@@ -18,19 +14,14 @@ export const StyledSideBar = styled.div`
   font-family: "Crimson Text", serif;
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  top: 10px;
+  box-shadow: 0px 1px 3px #d3d3d3;
 
   .side-bar-menu {
-    /* display: flex;
-    justify-content: space-evenly;
-    flex-direction: column; */
-    margin-top: 20px;
     font-family: "Crimson Text", serif;
     padding: 10px;
-    /* height: auto; */
 
     .bar-menu {
-      /* margin-top: 10px; */
       font-family: "Crimson Text", serif;
       padding: 10px;
 
@@ -41,9 +32,7 @@ export const StyledSideBar = styled.div`
   }
   .title-bar {
     margin-top: 10px;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
+
     font-family: "Crimson Text", serif;
   }
 
