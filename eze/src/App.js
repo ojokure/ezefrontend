@@ -12,7 +12,7 @@ import Spinner from "./Components/Spinner";
 
 const phones = [
   { name: "one", condition: "A1", price: 100 },
-  { name: "two", condition: "C", price: 1000 },
+  { name: "two", condition: "C/c", price: 1000 },
   { name: "three", condition: "A1", price: 1002 },
   { name: "four", condition: "A2", price: 1004 },
   { name: "five", condition: "A1", price: 10 },

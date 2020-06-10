@@ -17,12 +17,6 @@ export const StyledDeviceCard = styled.div`
   text-align: center;
   background: #1e242f;
   font-family: "Crimson Text", serif;
-
-  :hover {
-    /* opacity: 0.8; */
-    transform: scale(1);
-    transition: all 0.5s ease;
-  }
   box-shadow: 0px 1px 3px #d3d3d3;
 
   .header {
@@ -71,6 +65,12 @@ export const StyledDeviceCard = styled.div`
   .description p {
     margin: 0;
     font-family: "Crimson Text", serif;
+  }
+
+  :hover {
+    opacity: 0.8;
+    transform: scale(1.02);
+    transition: all 0.5s ease;
   }
 `;
 

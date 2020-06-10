@@ -17,11 +17,13 @@ export const StyledLoadMore = styled.button`
   padding: 0 20px;
   outline: none;
   border: none;
+  box-shadow: 0px 1px 2px #d3d3d3;
+
   @media ${devices.tablet} {
     margin-bottom: 100px;
   }
 
   :hover {
-    opacity: 0.8;
+    opacity: 0.5;
   }
 `;

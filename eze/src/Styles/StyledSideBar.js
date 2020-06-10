@@ -15,7 +15,7 @@ export const StyledSideBar = styled.div`
   position: -webkit-sticky;
   position: sticky;
   top: 10px;
-  box-shadow: 0px 1px 3px #d3d3d3;
+  box-shadow: 0px 1px 2px #d3d3d3;
 
   .side-bar-menu {
     font-family: "Crimson Text", serif;
