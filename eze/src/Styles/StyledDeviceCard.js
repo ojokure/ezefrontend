@@ -4,9 +4,9 @@ import devices from "../Utils/devices";
 import { StyledHeaderButton } from "./StyledHeader";
 
 export const StyledDeviceCard = styled.div`
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
   width: 11rem;
   height: 17rem;
@@ -15,56 +15,60 @@ export const StyledDeviceCard = styled.div`
   margin-bottom: 3.5rem;
   color: white;
   text-align: center;
-  background: #1e242f;
-  font-family: "Crimson Text", serif;
-  box-shadow: 0px 1px 3px #d3d3d3;
+  background: #091524;
+  font-family: "Source Sans Pro", sans-serif;
+  box-shadow: 0px 1px 2px #12c0cb;
 
-  .header {
+  @media ${devices.mobile} {
+    width: 9rem;
+  }
+
+  .condition {
     display: flex;
-    flex-direction: row-reverse;
     justify-content: flex-end;
-    align-items: center;
     width: 100%;
-    max-height: 5.5rem;
-    font-family: "Crimson Text", serif;
-
-    .header-text {
-      margin-left: 1rem;
-      font-family: "Crimson Text", serif;
-
-      h3 {
-        font-weight: bold;
-        font-size: 1rem;
-        color: white;
-        margin: 0;
-      }
-      p {
-        margin: 0;
-      }
-    }
-    .buy-button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .header-image {
-      width: 90%;
-      height: 90%;
-      display: flex;
-      justify-content: flex-start;
-      /* align-items: center; */
-    }
+    font-family: "Source Sans Pro", sans-serif;
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
 
-  .bullet-points p {
-    margin: 0;
-    font-family: "Crimson Text", serif;
-  }
+  .mid-sec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-  .description p {
-    margin: 0;
-    font-family: "Crimson Text", serif;
+    font-family: "Source Sans Pro", sans-serif;
+    .card-img {
+      /* width: 5.5rem; */
+      height: 5.5rem;
+      margin-right: 55px;
+      /* justify-content: flex-start; */
+    }
+
+    .name {
+      margin-top: 10px;
+      font-family: "Source Sans Pro", sans-serif;
+    }
+    h3 {
+      font-family: "Source Sans Pro", sans-serif;
+      margin-top: 0;
+    }
+
+    p {
+      font-family: "Source Sans Pro", sans-serif;
+      margin-top: 0;
+    }
+
+    .unit-price {
+      font-family: "Source Sans Pro", sans-serif;
+    }
+  }
+  .buy-button {
+    /* display: flex; */
+    align-items: center;
+    /* justify-content: center; */
+    font-family: "Source Sans Pro", sans-serif;
   }
 
   :hover {

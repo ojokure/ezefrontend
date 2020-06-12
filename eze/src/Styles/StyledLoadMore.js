@@ -2,7 +2,7 @@ import styled from "styled-components";
 import devices from "../Utils/devices";
 
 export const StyledLoadMore = styled.button`
-  background: #1e242f;
+  background: #091524;
   width: 15%;
   min-width: 80px;
   height: 60px;
@@ -17,7 +17,7 @@ export const StyledLoadMore = styled.button`
   padding: 0 20px;
   outline: none;
   border: none;
-  box-shadow: 0px 1px 2px #d3d3d3;
+  box-shadow: 0px 1px 1px #12c0cb;
 
   @media ${devices.tablet} {
     margin-bottom: 100px;

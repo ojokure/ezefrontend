@@ -9,6 +9,10 @@ export const StyledMarketplace = styled.div`
   width: 100%;
   margin-top: 5rem;
 
+  @media ${devices.tablet} {
+    margin-top: 1rem;
+  }
+
   .devices {
     display: flex;
     flex-wrap: wrap;

@@ -2,28 +2,58 @@ import styled from "styled-components";
 import devices from "../Utils/devices";
 
 export const StyledHeader = styled.div`
-  background-color: #14161c;
+  background-color: #0b1a31;
 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
   color: white;
-  padding-bottom: 100px;
-  margin: 0px 16px;
+  padding-bottom: 80px;
+  margin: 0px 30px;
+  /* margin-right: 0px; */
+  /* padding-right: 0px; */
 
   @media ${devices.tablet} {
     flex-direction: column;
+    text-align: center;
+  }
+  @media ${devices.mobile} {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 20px;
+    /* padding-righ */
   }
 
   .header-text {
+    margin-top: 3px;
+    @media ${devices.tablet} {
+      flex-direction: column;
+      text-align: center;
+      margin-left: 130px;
+      margin-bottom: 40px;
+    }
+    @media ${devices.mobile} {
+      flex-direction: column;
+      /* text-align: center; */
+      margin-left: 0;
+      margin-bottom: 30px;
+    }
   }
 
   .header-img {
-    margin-top: 15px;
-    width: 30%;
+    /* padding-right: 20px; */
+    width: 50%;
+    margin-top: 28px;
+    margin-right: 12px;
+    padding-bottom: 0px;
+    background-color: #0b1a31;
     @media ${devices.tablet} {
-      display: none;
+      /* display: none; */
+      width: 100%;
+    }
+    @media ${devices.mobile} {
+      padding-right: 0;
     }
   }
 

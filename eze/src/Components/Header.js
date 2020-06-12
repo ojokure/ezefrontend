@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import prdctsimg from "../Img/appleprdcts.PNG";
+import prdctsimg from "../Img/appleprdcts2.png";
 import { Input } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 import { StyledHeader, StyledHeaderButton } from "../Styles/StyledHeader";
@@ -23,17 +23,18 @@ function Header({ searchDevicesCallback }) {
     }, 500);
   };
 
-  useEffect(() => {
-    searchDevicesCallback(searchValue);
-  }, [searchValue]);
+  // useEffect(() => {
+  //   searchDevicesCallback(searchValue);
+  // }, [searchValue]);
 
   return (
     <StyledHeader>
-      <div>
+      <div className="header-text">
         <h1>
           SHOP OUR LATEST <br />
           AVAILABLE STOCK HERE
         </h1>
+
         <Input
           name="searchValue"
           id="search"
@@ -41,6 +42,7 @@ function Header({ searchDevicesCallback }) {
           // prefix={<SearchOutlined />}
           onChange={handleSearch}
           value={searchValue}
+          style={{ paddingLeft: "40px" }}
         />
         <StyledHeaderButton> Search </StyledHeaderButton>
       </div>

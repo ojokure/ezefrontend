@@ -24,19 +24,18 @@ export function SideBar({ searchPrice }) {
       <StyledSideBar>
         <div className="title-bar">Categories</div>
         <div className="side-bar-menu">
-          <div className="bar-menu"> All </div>
+          <div className="all"> All </div>
           <div className="bar-menu"> Iphone </div>
           <div className="bar-menu"> Samsung </div>
           <div className="bar-menu"> Ipad </div>
           <div className="bar-menu"> MacBook </div>
           <div className="bar-menu"> Airpods </div>
-          <div className="bar-menu"> Price Filter </div>
+          <div className="title-bar"> Price Filter </div>
           <div>
             <Input
               name="min"
               id="search"
               placeholder="Min"
-              // prefix={<SearchOutlined />}
               onChange={handleSearch}
               value={price.min}
             />
@@ -47,18 +46,25 @@ export function SideBar({ searchPrice }) {
               name="max"
               id="search"
               placeholder="Max"
-              // prefix={<SearchOutlined />}
-              // onChange={doSearch}
               // value={searchValue}
               onChange={handleSearch}
               value={price.max}
             />
           </div>
-          <div className="bar-menu"> Storage </div>
+          <div className="title-bar"> Storage </div>
           <div className="bar-menu"> 32gb </div>
           <div className="bar-menu"> 64gb </div>
           <div className="bar-menu"> 128gb </div>
           <div className="bar-menu"> 256gb </div>
+          <div className="title-bar"> Condition </div>
+          <div className="bar-menu"> New </div>
+          <div className="bar-menu"> A1 </div>
+          <div className="bar-menu"> A2 </div>
+          <div className="bar-menu"> B1 </div>
+          <div className="bar-menu"> B2 </div>
+          <div className="bar-menu"> C </div>
+          <div className="bar-menu"> C/B </div>
+          <div className="bar-menu"> C/D </div>
         </div>
       </StyledSideBar>
     </>

@@ -2,14 +2,9 @@ import React from "react";
 
 import { StyledLoadMore } from "../Styles/StyledLoadMore";
 
-const LoadMore = () => (
-  // { text, callback }
-  <StyledLoadMore
-    type="button"
-    //   onClick={callback}
-  >
+const LoadMore = ({ LoadMore }) => (
+  <StyledLoadMore type="button" onClick={LoadMore}>
     Load More
-    {/* {text} */}
   </StyledLoadMore>
 );
 

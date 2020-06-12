@@ -9,21 +9,29 @@ export const StyledSideBar = styled.div`
   margin-right: 0.5rem;
   color: white;
   text-align: center;
-  background: #1e242f;
+  background: #091524;
   margin-top: 0.5rem;
-  font-family: "Crimson Text", serif;
   position: -webkit-sticky;
   position: sticky;
   top: 10px;
-  box-shadow: 0px 1px 2px #d3d3d3;
+  box-shadow: 0px 1px 2px #12c0cb;
+
+  @media ${devices.tablet} {
+    margin-left: 1.6rem;
+    margin-right: 1.6rem;
+  }
 
   .side-bar-menu {
-    font-family: "Crimson Text", serif;
+    font-family: "Source Sans Pro", sans-serif;
     padding: 10px;
 
+    .all {
+      font-family: "Source Sans Pro", sans-serif;
+    }
+
     .bar-menu {
-      font-family: "Crimson Text", serif;
-      padding: 10px;
+      font-family: "Source Sans Pro", sans-serif;
+      padding: 7px;
 
       :hover {
         text-decoration: underline;
@@ -32,8 +40,9 @@ export const StyledSideBar = styled.div`
   }
   .title-bar {
     margin-top: 10px;
-
-    font-family: "Crimson Text", serif;
+    text-decoration: underline;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: bolder;
   }
 
   #search {

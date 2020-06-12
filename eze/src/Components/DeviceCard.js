@@ -2,22 +2,19 @@ import React from "react";
 import { StyledDeviceCard, StyledButton } from "../Styles/StyledDeviceCard";
 
 export const DeviceCard = (props) => {
-  const { name, images, condition, price } = props;
+  const { name, images, condition, price, storage } = props;
 
   return (
     <StyledDeviceCard className="device-card">
-      <div className="header">
-        <div className="header-text">
-          <h3>{condition}</h3>
-        </div>
-        <div>
-          <img className="header-image" src={images[16]} />
-        </div>
+      <div className="condition">{condition} </div>
+      <div className="mid-sec">
+        <img className="card-img" src={images[16]} alt="device" />
+        <div className="name"> {name} </div>
+        <p> Unlocked | {storage} </p>
+        <div className="unit-price"> unit price </div>
+        <h3>${price}</h3>
       </div>
-      <div className="bullet-points"></div>
-      <div className="description"></div>
-      Unit price <br />${price}
-      <StyledButton className="buy-button"> Buy </StyledButton>
+      <StyledButton className="buy-button">Buy</StyledButton>
     </StyledDeviceCard>
   );
 };
