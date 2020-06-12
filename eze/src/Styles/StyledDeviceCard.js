@@ -4,7 +4,6 @@ import devices from "../Utils/devices";
 import { StyledHeaderButton } from "./StyledHeader";
 
 export const StyledDeviceCard = styled.div`
-  /* display: flex; */
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -40,10 +39,8 @@ export const StyledDeviceCard = styled.div`
 
     font-family: "Source Sans Pro", sans-serif;
     .card-img {
-      /* width: 5.5rem; */
       height: 5.5rem;
       margin-right: 55px;
-      /* justify-content: flex-start; */
     }
 
     .name {
@@ -65,9 +62,7 @@ export const StyledDeviceCard = styled.div`
     }
   }
   .buy-button {
-    /* display: flex; */
     align-items: center;
-    /* justify-content: center; */
     font-family: "Source Sans Pro", sans-serif;
   }
 

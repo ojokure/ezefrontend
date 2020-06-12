@@ -21,8 +21,10 @@ To run this project, you'll need to have Node installed on your machine. It acce
 git clone https://github.com/ojokure/ezefrontend.git
 cd eze
 npm i
-echo "REACT_APP_BASE_URL='https://ezebackend-staging.herokuapp.com/'" > .env
 npm start // starts the app on port :3000
+
+"API_URL='https://eaze.herokuapp.com/'" >
+
 ```
 
 Other scripts:
@@ -46,44 +48,25 @@ For information on the backend of the app, please see [here](https://github.com/
 
 ## Directory structure
 
-<!--
-```
 src
 ├───components
-│   ├───Booking
-│   ├───Cards
-│   ├───Chat
-│   ├───Code
-│   ├───DataVisualization
-│   ├───FAQ
-│   ├───Inputs
-│   ├───Interview
-│   ├───Landing
-│   │   ├───Footer
-│   │   ├───Header
-│   │   ├───img
-│   │   ├───Main
-│   │   │   └───img
-│   │   └───Navigation
-│   ├───Modals
-│   ├───Notifications
-│   ├───Onboarding
-│   │   └───Login
-│   ├───Reschedule
-│   └───Settings
-├───img
-├───state
-│   ├───actions
-│   └───reducers
-├───utils
-└───views
-    ├───Code
-    ├───Feedback
-    ├───Interview
-    ├───Marketplace
-    ├───Settings
-    └───UserDashboard -->
-<!-- ``` -->
+│ ├───DeviceCard
+│ ├───Devices
+│ ├───Footer
+│ ├───Header
+│ ├───ImageArray
+│ ├───LoadMore
+│ ├───Sidebar
+│ ├───Spinner
+│
+│
+├───Hooks
+│ ├───UseStateFetch
+├───Img
+├───Tests
+│ ├───devices.test
+├───Utils
+├───devices
 
 ## Coding Style
 

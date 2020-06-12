@@ -60,7 +60,7 @@ function App() {
       <Devices devices={deviceState} searchPriceCallback={searchByPrice} />
 
       {next.currentPage < next.totalPages && !loading && (
-        <LoadMore loadMore={loadMore} />
+        <LoadMore data-testid="load more" loadMore={loadMore} />
       )}
       {loading ? <Spinner /> : <Footer />}
     </div>

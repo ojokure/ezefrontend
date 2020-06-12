@@ -12,10 +12,6 @@ function Header({ searchDevicesCallback }) {
     searchDevicesCallback(searchValue);
   };
 
-  // useEffect(() => {
-  //   searchDevicesCallback(searchValue);
-  // }, [searchValue]);
-
   return (
     <StyledHeader>
       <div className="header-text">

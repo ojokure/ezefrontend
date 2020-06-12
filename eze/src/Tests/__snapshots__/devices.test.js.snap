@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="sc-AxgMl Meypm"
+>
+  <div
+    className="sc-AxhUy fAIeOp"
+  >
+    <div
+      className="title-bar"
+    >
+      Categories
+    </div>
+    <div
+      className="side-bar-menu"
+    >
+      <div
+        className="all"
+      >
+         All 
+      </div>
+      <div
+        className="bar-menu"
+      >
+         Iphone 
+      </div>
+      <div
+        className="bar-menu"
+      >
+         Samsung 
+      </div>
+      <div
+        className="bar-menu"
+      >
+         Ipad 
+      </div>
+      <div
+        className="bar-menu"
+      >
+         MacBook 
+      </div>
+      <div
+        className="bar-menu"
+      >
+         Airpods 
+      </div>
+      <div
+        className="title-bar"
+      >
+         Price Filter 
+      </div>
+      <div>
+        <input
+          className="ant-input"
+          id="search"
+          name="min"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          placeholder="Min"
+          type="text"
+          value={0}
+        />
+      </div>
+      <div>
+         | 
+      </div>
+      <div>
+        <input
+          className="ant-input"
+          id="search"
+          name="max"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          placeholder="Max"
+          type="text"
+          value={10000}
+        />
+      </div>
+      <div
+        className="title-bar"
+      >
+         Storage 
+      </div>
+      <div
+        className="bar-menu"
+      >
+         32gb 
+      </div>
+      <div
+        className="bar-menu"
+      >
+         64gb 
+      </div>
+      <div
+        className="bar-menu"
+      >
+         128gb 
+      </div>
+      <div
+        className="bar-menu"
+      >
+         256gb 
+      </div>
+    </div>
+  </div>
+  <div
+    className="devices"
+  />
+</div>
+`;

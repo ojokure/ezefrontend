@@ -16,7 +16,6 @@ export function SideBar({ searchPrice }) {
     setPrice({ [name]: value });
 
     searchPrice(price.min, price.max);
-    console.log(price);
   };
 
   return (

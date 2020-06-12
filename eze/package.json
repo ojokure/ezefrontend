@@ -15,6 +15,7 @@
     "react-dom": "^16.13.1",
     "react-fontawesome": "^1.7.1",
     "react-scripts": "3.4.1",
+    "react-test-render": "^1.1.2",
     "styled-components": "^5.1.1"
   },
   "scripts": {
@@ -48,6 +49,8 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^1.7.0",
-    "prettier": "^1.18.2"
+    "jest-dom": "^4.0.0",
+    "prettier": "^1.18.2",
+    "react-test-renderer": "^16.13.1"
   }
 }

@@ -11,8 +11,6 @@ export const StyledHeader = styled.div`
   color: white;
   padding-bottom: 80px;
   margin: 0px 30px;
-  /* margin-right: 0px; */
-  /* padding-right: 0px; */
 
   @media ${devices.tablet} {
     flex-direction: column;
@@ -22,7 +20,6 @@ export const StyledHeader = styled.div`
     flex-direction: column;
     text-align: center;
     margin-bottom: 20px;
-    /* padding-righ */
   }
 
   .header-text {
@@ -35,7 +32,6 @@ export const StyledHeader = styled.div`
     }
     @media ${devices.mobile} {
       flex-direction: column;
-      /* text-align: center; */
       margin-left: 0;
       margin-bottom: 30px;
     }
