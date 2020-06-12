@@ -1,26 +1,15 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import prdctsimg from "../Img/appleprdcts2.png";
 import { Input } from "antd";
-import { SearchOutlined } from "@ant-design/icons";
 import { StyledHeader, StyledHeaderButton } from "../Styles/StyledHeader";
 
 function Header({ searchDevicesCallback }) {
   const [searchValue, setSearchValue] = useState("");
 
-  const timeOut = useRef(null);
-
   const handleSearch = (event) => {
-    const { value } = event.target;
+    setSearchValue(event.target.value);
 
-    clearTimeout(timeOut.current);
-    // console.log(value);
-    setSearchValue(value);
-    console.log(event.target.value);
-
-    timeOut.current = setTimeout(() => {
-      searchDevicesCallback(searchValue);
-      console.log(searchValue);
-    }, 500);
+    searchDevicesCallback(searchValue);
   };
 
   // useEffect(() => {
@@ -39,7 +28,6 @@ function Header({ searchDevicesCallback }) {
           name="searchValue"
           id="search"
           placeholder="Search by name, condition, storage size"
-          // prefix={<SearchOutlined />}
           onChange={handleSearch}
           value={searchValue}
           style={{ paddingLeft: "40px" }}

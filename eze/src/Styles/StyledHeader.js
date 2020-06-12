@@ -42,14 +42,12 @@ export const StyledHeader = styled.div`
   }
 
   .header-img {
-    /* padding-right: 20px; */
     width: 50%;
     margin-top: 28px;
     margin-right: 12px;
     padding-bottom: 0px;
     background-color: #0b1a31;
     @media ${devices.tablet} {
-      /* display: none; */
       width: 100%;
     }
     @media ${devices.mobile} {

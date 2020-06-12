@@ -1,49 +1,58 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-export const useStateFetch = (searchTerm) => {
+export const useStateFetch = () => {
   const [deviceState, setDeviceState] = useState([]);
   const [state, setState] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-  const [hasMore, setHasMore] = useState(false);
 
-  // useEffect(() => {
-  //   setDeviceState([]);
-  // }, [searchTerm]);
+  const searchByPrice = (min, max) => {
+    // setDeviceState((prev) =>
+    //   prev.filter(
+    //     (devices) =>
+    //       devices.price >= parseInt(min) && devices.price <= parseInt(max)
+    //   )
+    // );
+  };
 
+  // make an axios call to get the next page
   const loadMoreDevices = (endpoint) => {
+    setError(false);
     axios
       .get(endpoint)
       .then((res) => {
         setDeviceState((prevDevices) => [...prevDevices, ...res.data.results]);
         setState({ ...res.data });
-        // setHasMore(res.data.next.totalPages > pageNumber);
         setLoading(false);
       })
       .catch((error) => {
-        console.log(error.message);
         setError(true);
       });
   };
 
-  // useEffect(() => {
-  //   setLoading(true);
-  //   setError(false);
-
-  //   axios
-  //     .get("http://localhost:5555/sell?page=1&limit=20")
-  //     .then((res) => {
-  //       setDeviceState((prevDevices) => [...prevDevices, ...res.data.results]);
-  //       setState({ ...res.data });
-  //       // setHasMore(res.data.next.totalPages > pageNumber);
-  //       setLoading(false);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error.message);
-  //       setError(true);
-  //     });
-  // }, [pageNumber]);
+  // Search for devices from the header
+  const searchDevices = (searchTerm) => {
+    if (searchTerm) {
+      setDeviceState((prev) =>
+        prev.filter(
+          (devices) =>
+            (devices.name &&
+              devices.name
+                .toLowerCase()
+                .includes(searchTerm && searchTerm.toLowerCase())) ||
+            (devices.condition &&
+              devices.condition
+                .toLowerCase()
+                .includes(searchTerm && searchTerm.toLowerCase())) ||
+            (devices.storage &&
+              devices.storage
+                .toLowerCase()
+                .includes(searchTerm && searchTerm.toLowerCase()))
+        )
+      );
+    }
+  };
 
   // Fetch initially on mount
   useEffect(() => {
@@ -56,14 +65,17 @@ export const useStateFetch = (searchTerm) => {
         .then((res) => {
           setDeviceState(res.data.results);
           setState({ ...res.data });
-          // setHasMore(res.data.next.totalPages > pageNumber);
           setLoading(false);
         })
         .catch((error) => {
-          console.log(error.message);
           setError(true);
         });
     }
   }, []);
-  return [{ loading, error, deviceState, state, hasMore }, loadMoreDevices];
+  return [
+    { loading, error, deviceState, state },
+    loadMoreDevices,
+    searchDevices,
+    searchByPrice,
+  ];
 };

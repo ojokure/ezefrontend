@@ -3,20 +3,20 @@ import { Input } from "antd";
 import { StyledSideBar } from "../Styles/StyledSideBar";
 
 export function SideBar({ searchPrice }) {
-  const maxnMin = {
-    min: "",
-    max: "",
+  const prices = {
+    min: 0,
+    max: 10000,
   };
 
-  const [price, setPrice] = useState(maxnMin);
+  const [price, setPrice] = useState(prices);
 
   const handleSearch = (event) => {
     const { value, name } = event.target;
 
-    setPrice({ ...price, [name]: +parseInt(value) });
+    setPrice({ [name]: value });
 
     searchPrice(price.min, price.max);
-    // console.log(price);
+    console.log(price);
   };
 
   return (
@@ -37,7 +37,7 @@ export function SideBar({ searchPrice }) {
               id="search"
               placeholder="Min"
               onChange={handleSearch}
-              value={price.min}
+              defaultValue={price.min}
             />
           </div>
           <div> | </div>
@@ -48,7 +48,7 @@ export function SideBar({ searchPrice }) {
               placeholder="Max"
               // value={searchValue}
               onChange={handleSearch}
-              value={price.max}
+              defaultValue={price.max}
             />
           </div>
           <div className="title-bar"> Storage </div>
@@ -56,15 +56,6 @@ export function SideBar({ searchPrice }) {
           <div className="bar-menu"> 64gb </div>
           <div className="bar-menu"> 128gb </div>
           <div className="bar-menu"> 256gb </div>
-          <div className="title-bar"> Condition </div>
-          <div className="bar-menu"> New </div>
-          <div className="bar-menu"> A1 </div>
-          <div className="bar-menu"> A2 </div>
-          <div className="bar-menu"> B1 </div>
-          <div className="bar-menu"> B2 </div>
-          <div className="bar-menu"> C </div>
-          <div className="bar-menu"> C/B </div>
-          <div className="bar-menu"> C/D </div>
         </div>
       </StyledSideBar>
     </>

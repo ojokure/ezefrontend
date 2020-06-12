@@ -15,6 +15,7 @@ export const StyledSideBar = styled.div`
   position: sticky;
   top: 10px;
   box-shadow: 0px 1px 2px #12c0cb;
+  font-family: "Source Sans Pro", sans-serif;
 
   @media ${devices.tablet} {
     margin-left: 1.6rem;

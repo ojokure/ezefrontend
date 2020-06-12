@@ -6,7 +6,6 @@ import { StyledMarketplace } from "../Styles/StyledMarketPlace";
 
 function Devices(props) {
   const { devices, searchPriceCallback } = props;
-  console.log(devices.length);
 
   return (
     <StyledMarketplace>
