@@ -5,7 +5,7 @@
 Eze is a simple fullstack challenge to screen prospective developers that will come onboard the Eze Development Team.
 See the deployed product at
 
- <!-- [eze.com](https://www.eze.com). -->
+[eazechallenge.herokuapp.com](https://eazechallenge.herokuapp.com).
 
 # Sole Contributor
 
