@@ -24,7 +24,7 @@ function App() {
 
   const loadMore = () => {
     if (next.currentPage) {
-      const loadEndpoint = `http://localhost:5555/sell?page=${next.currentPage +
+      const loadEndpoint = `https://eaze.herokuapp.com/sell?page=${next.currentPage +
         1}&limit=20`;
 
       loadMoreDevices(loadEndpoint);

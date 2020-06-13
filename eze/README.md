@@ -23,7 +23,7 @@ cd eze
 npm i
 npm start // starts the app on port :3000
 
-"API_URL='https://eaze.herokuapp.com/'" >
+"API_URL='https://eaze.herokuapp.com/?page=1&limit=20'" >
 
 ```
 

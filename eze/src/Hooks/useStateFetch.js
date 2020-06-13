@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { API_URL } from "../config";
 
 export const useStateFetch = () => {
   const [deviceState, setDeviceState] = useState([]);
@@ -61,7 +62,7 @@ export const useStateFetch = () => {
       setLoading(false);
     } else {
       axios
-        .get("http://localhost:5555/sell?page=1&limit=20")
+        .get(API_URL)
         .then((res) => {
           setDeviceState(res.data.results);
           setState({ ...res.data });

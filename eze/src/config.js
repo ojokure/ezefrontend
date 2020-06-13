@@ -1,3 +1,1 @@
-const API_URL = "http://localhost:5555/sell";
-
-const LIMIT_URL = "http://localhost:5555/sell?page=1&limit=20";
+export const API_URL = "https://eaze.herokuapp.com/sell?page=1&limit=20";
