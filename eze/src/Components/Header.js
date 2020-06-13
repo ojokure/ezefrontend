@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import prdctsimg from "../Img/appleprdcts2.png";
+import appleprdcts2 from "../Img/appleprdcts2.png";
 import { Input } from "antd";
 import { StyledHeader, StyledHeaderButton } from "../Styles/StyledHeader";
 
@@ -31,7 +31,7 @@ function Header({ searchDevicesCallback }) {
         <StyledHeaderButton> Search </StyledHeaderButton>
       </div>
 
-      <img src={prdctsimg} alt="products" className="header-img" />
+      <img src={appleprdcts2} alt="products" className="header-img" />
     </StyledHeader>
   );
 }
