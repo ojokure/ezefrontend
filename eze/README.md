@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-Eze is a simple fullstack challenge to screen prospective developers that will come onboard the Eze Development Team.
+Eze is a simple MERN Stack app.
 See the deployed product at
 
 [eazechallenge.herokuapp.com](https://eazechallenge.herokuapp.com).
